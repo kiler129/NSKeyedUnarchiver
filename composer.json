@@ -1,0 +1,49 @@
+{
+    "name": "noflash/nskeyedunarchiver",
+    "description": "Extensible & flexible NSKeyedUnarchiver implementation",
+    "type": "library",
+    "license": "MIT",
+    "readme": "README.md",
+    "authors": [
+        {
+            "name": "kiler129",
+            "homepage": "https://github.com/kiler129",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/kiler129/NSKeyedUnarchiver",
+        "issues": "https://github.com/kiler129/NSKeyedUnarchiver/issues"
+    },
+    "require": {
+        "php": ">=8.0",
+        "rodneyrehm/plist": "^2.0",
+        "symfony/property-access": "^6.0",
+        "symfony/polyfill-php81": "^1.25"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "symfony/var-dumper": "^6.0",
+        "phpstan/phpstan": "^1.4",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "slam/phpstan-extensions": "^6.0",
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "haydenpierce/class-finder": "^0.4.3",
+        "symfony/uid": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NoFlash\\NSKeyedUnarchiver\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NoFlash\\NSKeyedUnarchiver\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+    }
+}
