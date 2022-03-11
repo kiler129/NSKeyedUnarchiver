@@ -1,0 +1,21 @@
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+._*
+.AppleDB
+.AppleDesktop
+
+### PHP-related files ###
+/phpunit.xml
+/phpstan.neon
+/build/
+/composer.phar
+/vendor/
+composer.lock
+/.phpunit.result.cache
+
+### InteliJ ###
+.idea/
