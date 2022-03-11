@@ -1,0 +1,22 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - vendor/slam/phpstan-extensions/conf/slam-rules.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        - '/Parameter #1 \$offset \(.+\) of method .*::offsetSet\(\) should be contravariant with parameter \$offset \(.+\) of method ArrayAccess<.+>::offsetSet\(\)/'
+        - '/Abstract class NoFlash\\NSKeyedUnarchiver\\DTO\\Native\\NSObject should start with "Abstract" prefix/'
+        -
+            message: '/Variable property access on \$this/'
+            path: src/DTO/FlatNSUnserializerTrait.php
+        -
+            message: '/TypeError is never thrown in the try block/'
+            path: src/DTO/FlatNSUnserializerTrait.php
+    universalObjectCratesClasses:
+        - NoFlash\NSKeyedUnarchiver\DTO\NSIncompleteObject
